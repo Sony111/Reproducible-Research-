@@ -22,6 +22,7 @@ act <- activity
 activity_S <- aggregate(activity$steps,list(activity$date),sum)
 hist(activity_S$x,xlab="steps",main="Total No.of Steps Each Day")
 ```
+# The Graph related to this is stored in hist_NA.png
 
 #### 2. Calculate and report the mean and median total number of steps taken per day
 ```{r}
@@ -46,6 +47,8 @@ plot(activity_Mean$Group.1,activity_Mean$x,main="Mean & Median(total number of s
 abline(h=activity_Median$x,col="red")
 legend("topright",col = c("blue", "red"),legend = c("Mean", "Median"), lty=1)
 ```
+
+# The Graph related to this is stored in SI_NA.png
 
 #### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -98,6 +101,10 @@ abline(h=act_Median$x,col="red")
 legend("topright",col = c("blue", "red"),legend = c("Mean", "Median"), lty=1)
 ```
 
+# The Graph related to this is stored in hist.png
+
+# The Graph related to this is stored in SI.png
+
 ### Yes. If the data is changed the graph will be changed.Due to missing data graph is not continuous (there will be lot of gaps in between)
 
 ### Are there differences in activity patterns between weekdays and weekends?
@@ -129,3 +136,5 @@ colnames(actSI) <- c("date","day","interval","steps")
 qplot(interval,steps, data = actSI , geom="line" , facets = ~day)
 
 ```
+
+# The Graph related to this is stored in timeplot.png
